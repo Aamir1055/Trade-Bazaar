@@ -1,4 +1,4 @@
-# Trade Bazaar - Login Page with Mobile Verification
+# Trade Bazaar -Signup / Login Page 
 
 This is a responsive login page for **Trade Bazaar**, designed with modern UI principles using **HTML** and **CSS**. It includes a **mobile number verification popup** that appears when the user clicks on "Forgot Password?".
 
