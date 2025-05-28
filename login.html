@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trade Bazaar - Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      background-color: #0D0D0D;
+      font-family: 'Inter', sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      padding: 30px 20px;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      gap: 16px;
+    }
+
+    .feature-box {
+      background-color: #1B1B1B;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      width: 22%;
+      font-size: 10px;
+    }
+
+    .feature-box img {
+      width: 25px;
+      margin-bottom: 5px;
+    }
+
+    .highlight {
+      color: #A5FF3B;
+    }
+
+    h2 {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin-top: 5px;
+      margin-bottom: 25px;
+    }
+
+    .input-group {
+      display: flex;
+      align-items: center;
+      border: 1px solid #A5FF3B;
+      border-radius: 30px;
+      padding: 10px 15px;
+      margin-bottom: 15px;
+    }
+
+    .input-group i {
+      margin-right: 10px;
+      color: #fff;
+    }
+
+    .input-group input {
+      background: none;
+      border: none;
+      outline: none;
+      color: white;
+      width: 100%;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 30px;
+      background-color: #A5FF3B;
+      color: black;
+      font-weight: 600;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .forgot, .register-link {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 13px;
+    }
+
+    .forgot {
+      cursor: pointer;
+    }
+
+    .register-link span {
+      color: #A5FF3B;
+      cursor: pointer;
+    }
+
+    .links a {
+      color: #A5FF3B;
+      text-decoration: none;
+    }
+
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .popup {
+      background-color: #C2FF3B;
+      padding: 30px 20px;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 350px;
+      text-align: center;
+      position: relative;
+    }
+
+    .popup h2 {
+      color: #000;
+      margin-bottom: 25px;
+      font-size: 18px;
+    }
+
+    .code-input {
+      width: 100%;
+      padding: 10px 15px;
+      border-radius: 40px;
+      border: none;
+      font-size: 15px;
+      text-align: center;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+    }
+
+    .verify-button {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 40px;
+      background-color: #000;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      cursor: pointer;
+    }
+
+    .resend {
+      color: black;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 18px;
+      color: #000;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="images/Trader.png" alt="Logo" />
+    </div>
+
+    <h2>Welcome Back</h2>
+    <p><span class="highlight">login there</span></p>
+
+    <div class="input-group">
+      <i class="fa fa-phone"></i>
+      <input type="tel" placeholder="Mobile Number" />
+    </div>
+    <div class="input-group">
+      <i class="fa fa-lock"></i>
+      <input type="password" placeholder="Password" />
+    </div>
+    <button>Continue</button>
+
+    <div class="forgot" onclick="openPopup()">Forgot Password?</div>
+    <div class="links">
+      <p><span style="color: #fff;">I Already have an account</span> <a href="index.html">Register Here</a></p>
+    </div>
+
+    <div style="height: 30px;"></div>
+
+    <div class="features">
+      <div class="feature-box">
+        <img src="images/zero.png" alt="0%" />
+        <div><span class="highlight">0%</span> BROKERAGE</div>
+      </div>
+      <div class="feature-box">
+        <img src="images/person.png" alt="Payouts" />
+        <div>Instant Payouts</div>
+      </div>
+      <div class="feature-box">
+        <img src="images/coin.png" alt="500x" />
+        <div>Upto <span class="highlight">500x</span> MARGIN</div>
+      </div>
+      <div class="feature-box">
+        <img src="images/graph.png" alt="Markets" />
+        <div>All Indian markets</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup for Mobile Verification -->
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup">
+      <div class="close-btn" onclick="closePopup()">&times;</div>
+      <h2>Mobile Number Verification</h2>
+      <input type="text" class="code-input" placeholder="6 Digits Code" maxlength="6" />
+      <button class="verify-button">Verify</button>
+      <div class="resend">Resend</div>
+    </div>
+  </div>
+
+  <script>
+    function openPopup() {
+      document.getElementById("popupOverlay").style.display = "flex";
+    }
+
+    function closePopup() {
+      document.getElementById("popupOverlay").style.display = "none";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trade Bazaar Register</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background-color: #0D0D0D;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .container {
+      width: 100%;
+      max-width: 400px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+    .logo img {
+      height: 50px;
+    }
+    h2 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+    p {
+      color: #A5FF3B;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    .input-group {
+      position: relative;
+      margin-bottom: 15px;
+    }
+    .input-group i {
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+      color: #fff;
+    }
+    .input-group input {
+      width: 100%;
+      padding: 12px 16px 12px 40px;
+      border: 2px solid #A5FF3B;
+      border-radius: 25px;
+      background-color: transparent;
+      color: white;
+      font-size: 16px;
+    }
+    .input-group input::placeholder {
+      color: #aaa;
+    }
+    .flag-input {
+      display: flex;
+      align-items: center;
+      border: 2px solid #A5FF3B;
+      border-radius: 25px;
+      padding: 10px 16px;
+      margin-bottom: 15px;
+      background-color: transparent;
+    }
+    .flag-circle {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .flag-circle img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .divider {
+      width: 1px;
+      height: 24px;
+      background: #A5FF3B;
+      margin: 0 12px;
+    }
+    .flag-input input {
+      border: none;
+      background: transparent;
+      width: 100%;
+      color: white;
+      outline: none;
+      font-size: 16px;
+    }
+    select {
+      width: 100%;
+      padding: 12px 16px;
+      margin-bottom: 15px;
+      border: 2px solid #A5FF3B;
+      border-radius: 25px;
+      background-color: transparent;
+      color: white;
+      font-size: 16px;
+    }
+    option {
+      background-color: #0D0D0D;
+      color: #fff;
+    }
+    button {
+      width: 100%;
+      background-color: #A5FF3B;
+      color: black;
+      padding: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 25px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    .login-link {
+      text-align: center;
+      color: white;
+      font-size: 14px;
+      margin: 15px 0;
+    }
+    .login-link span {
+      color: #A5FF3B;
+      cursor: pointer;
+    }
+    .features {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      gap: 10px;
+    }
+    .feature-box {
+      background-color: #1A1A1A;
+      border-radius: 12px;
+      padding: 10px;
+      flex: 1;
+      text-align: center;
+      font-size: 12px;
+    }
+    .feature-box img {
+      width: 30px;
+      height: 30px;
+      margin-bottom: 5px;
+    }
+    .highlight {
+      color: #A5FF3B;
+      font-weight: 600;
+    }
+    .links a {
+  color: #A5FF3B;
+  text-decoration: none;
+}
+.links a:visited {
+  color: #A5FF3B;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="images/Trader.png" alt="Logo" />
+      
+    </div>
+    <h2>Register Here</h2>
+    <p>Let's get started!</p>
+    <div class="input-group">
+      <i class="fa fa-user"></i>
+      <input type="text" placeholder="Firstname" />
+    </div>
+    <div class="flag-input">
+      <div class="flag-circle">
+        <img src="https://flagcdn.com/w40/in.png" alt="India Flag">
+      </div>
+      <div class="divider"></div>
+      <input type="tel" placeholder="+91 Mobile Number">
+    </div>
+    <div class="input-group">
+      <i class="fa fa-lock"></i>
+      <input type="password" placeholder="Password" />
+    </div>
+    <div class="input-group">
+      <i class="fa fa-lock"></i>
+      <input type="password" placeholder="Confirm Password" />
+    </div>
+    <select>
+      <option disabled selected>RM Support Language</option>
+      <option value="hindi">Hindi</option>
+      <option value="english">English</option>
+      <option value="tamil">Tamil</option>
+      <option value="telugu">Telugu</option>
+      <option value="kannada">Kannada</option>
+      <option value="malayalam">Malayalam</option>
+      <option value="gujarati">Gujarati</option>
+      <option value="bengali">Bengali</option>
+      <option value="marathi">Marathi</option>
+      <option value="punjabi">Punjabi</option>
+      <option value="odia">Odia</option>
+      
+    </select>
+    <button>Sign Up</button>
+    <div class="links">
+    <p><span style="color: #fff;">I Already have an account</span> <a href="login.html">Login</a></p>
+    </div>
+    <div class="features">
+      <div class="feature-box">
+        <img src="images/zero.png" alt="0%">
+        <div><span class="highlight">0%</span> BROKERAGE</div>
+      </div>
+      <div class="feature-box">
+        <img src="images/person.png" alt="Payouts">
+        <div>Instant Payouts</div>
+      </div>
+      <div class="feature-box">
+        <img src="images/coin.png" alt="500x">
+        <div>Upto <span class="highlight">500x</span> MARGIN</div>
+      </div>
+      <div class="feature-box">
+        <img src="images/graph.png" alt="Markets">
+        <div>All Indian markets</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
