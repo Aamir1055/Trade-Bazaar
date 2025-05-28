@@ -46,9 +46,7 @@ You can customize:
 - Add input validation
 - Enhance UX with animations (optional)
 
-## 🖼 Preview
 
-![Screenshot](images/screenshot.png) *(Replace with actual screenshot if desired)*
 
 ---
 
